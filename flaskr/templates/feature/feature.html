@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Feature 1</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" method="post" action="/feature/uploader">
+        <label for="File">Tệp tải lên</label>
+        <input type="file" id="myFile" name="filename">
+        <input type="submit">
+    </form>
+    <br>
+    
+    <li><a href="{{ url_for('feature.create_User') }}">Tạo user mới</a></li>
+    <li><a href="{{ url_for('feature.render_user') }}">Tìm user</a></li>
+    <li><a href="{{ url_for('feature.create_Team') }}">Tạo team mới</a></li>
+    
+
+    <nav>
+        {% block add_user %} {% endblock %}
+    </nav>
+
+    <nav>
+        {% block user %}{% endblock %}
+        
+    </nav>
+
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myInput");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+        </script>
+        
+</body>
+</html>

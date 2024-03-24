@@ -1,0 +1,46 @@
+{% extends 'feature/feature.html' %}
+
+
+{% block add_user %}
+    <h1>Thêm user</h1>
+    <form enctype="multipart/form-data" method="post" action="/feature/NewUser">
+        <div> 
+            username: 
+            <input type="text" id="Username" name="username"><br><br>
+        </div>
+        <div> 
+            Password: 
+            <input type="password" value="" id="password" name="password">
+            <input type="checkbox" onclick="myFunction()">Show Password<br><br>
+        </div>
+        <div> 
+            Nhập lại password: 
+            <input type="password" value="" id="repassword" name="repassword">
+            <input type="checkbox" onclick="myFunction()">Show Password<br><br>
+        </div>
+        <div> 
+            Họ và Tên: 
+            <input type="text" id="Name" name="name"><br><br>
+        </div>
+        <div> 
+            Email: 
+            <input type="text" id="Email" name="email"><br><br>
+        </div>
+        <div> 
+            Phone: 
+            <input type="text" id="Phone" name="phone"><br><br>
+        </div>
+        <div> 
+            Note: 
+            <input type="text" id="Note" name="note"><br><br>
+        </div>
+        <div>
+            <label for="File">avata</label>
+            <input type="file" id="myFile" name="filename"><br><br>
+            
+        </div>
+        <div style="text-align: center;"><input type="submit"></div>
+    </form>
+
+{% endblock %}
+

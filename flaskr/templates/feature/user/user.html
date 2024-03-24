@@ -1,0 +1,17 @@
+{% extends 'feature/feature.html' %}
+
+{% block user %}
+    <h1>Hiện các users</h1>
+        <header>
+            
+        </header>
+    {% for user in users %}
+        <br><br>
+        {{user.username}}
+        <br>
+        {{user.email}}
+        <br><br><br>
+
+    {% endfor %}
+    
+{% endblock %}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Feature 1</title>
+</head>
+<body>
+    <h1>Thông tin users</h1>
+    <form method="post">
+        <div>
+            tìm user theo username: 
+            <input type="text" id="username" name="username"><br><br>
+        </div>
+        <div>
+            tìm user theo name: 
+            <input type="text" id="name" name="name"><br><br>
+        </div>
+        <div>
+            tìm user theo email: 
+            <input type="text" id="email" name="email"><br><br>
+        </div>
+        
+        <div style="text-align: center;">
+            <div style="text-align: center;"><input type="submit"></div>
+        </div>
+    </form>
+    
+        <header>
+            
+        </header>
+
+    {% if users is defined%}
+        {{users}}
+        <!-- {% for user in users %}
+            <br><br>
+            username: 
+            <a href="">{{user.username}}</a>
+            
+            <br>
+            email: {{user.email}}
+            <br>
+            <a href="">xóa user</a>
+            <br><br><br>
+        {% endfor %} -->
+    {% endif %}
+</body>
+
+</html>
