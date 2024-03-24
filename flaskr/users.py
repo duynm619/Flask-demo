@@ -94,7 +94,7 @@ def create_user():
         return resJ
     else:
         return {'error': error}, 400
-
+#
 @bp.route('/users/<string:id>', methods=['PUT'])
 def uppdate_user(id):
     client = MongoClient('mongodb://localhost:27017/') 
